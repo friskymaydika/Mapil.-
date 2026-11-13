@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Undangan Pernikahan Frisky & Amiya</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;0,600;1,400&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+  html{scroll-behavior:smooth}
+  body{font-family:'Montserrat',sans-serif;font-weight:300;background:#0a0a0a;color:#e5e5e5}
+  .serif{font-family:'Cormorant Garamond',serif}
+  .rv{opacity:0;transform:translateY(32px);transition:all 1s ease}
+  .rv.show{opacity:1;transform:none}
+  .line{height:1px;width:64px;background:#737373;margin:0 auto}
+  .card{border:1px solid #333;background:#111}
+  .btn{border:1px solid #e5e5e5;padding:.7rem 1.6rem;letter-spacing:.2em;font-size:.7rem;text-transform:uppercase;transition:.4s}
+  .btn:hover{background:#e5e5e5;color:#0a0a0a}
+  .gal img{filter:grayscale(1);transition:.6s}
+  .gal img:hover{filter:grayscale(0);transform:scale(1.05)}
+  input,textarea,select{background:transparent;border:1px solid #404040;padding:.75rem;width:100%;outline:none;transition:.3s}
+  input:focus,textarea:focus,select:focus{border-color:#e5e5e5}
+  select option{background:#111}
+  #cover{transition:transform 1.2s cubic-bezier(.7,0,.3,1)}
+  #cover.out{transform:translateY(-100%)}
+</style>
+</head>
+<body class="overflow-hidden">
+
+<!-- COVER -->
+<section id="cover" class="fixed inset-0 z-50 flex flex-col items-center justify-center text-center px-6 bg-cover bg-center" style="background-image:linear-gradient(#000a,#000e),url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80');filter:grayscale(1)">
+  <p class="tracking-[.4em] text-xs uppercase text-neutral-400 mb-6">The Wedding of</p>
+  <h1 class="serif text-6xl md:text-8xl font-light">Frisky<span class="block text-3xl italic text-neutral-400 my-2">&amp;</span>Amiya</h1>
+  <div class="line my-8"></div>
+  <p class="tracking-[.3em] text-sm mb-2">20 · 12 · 2026</p>
+  <p class="text-xs text-neutral-400 mb-10">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+  <button id="openBtn" class="btn"><i class="fa-solid fa-envelope-open mr-2"></i>Buka Undangan</button>
+</section>
+
+<!-- MUSIC -->
+<button id="musicBtn" class="fixed bottom-5 right-5 z-40 w-11 h-11 rounded-full border border-neutral-500 bg-black/70 backdrop-blur hidden items-center justify-center">
+  <i id="musicIcon" class="fa-solid fa-music"></i>
+</button>
+<audio id="bgm" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3"></audio>
+
+<!-- HERO -->
+<header class="min-h-screen flex flex-col items-center justify-center text-center px-6 bg-cover bg-center" style="background-image:linear-gradient(#000b,#0a0a0a),url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1200&q=80')">
+  <div class="rv">
+    <p class="tracking-[.4em] text-xs uppercase text-neutral-400">Kami Menikah</p>
+    <h2 class="serif text-6xl md:text-8xl my-6">Frisky &amp; Amiya</h2>
+    <div class="line mb-6"></div>
+    <p class="serif italic text-xl text-neutral-300 max-w-md mx-auto">"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan pasangan untukmu agar kamu merasa tenteram kepadanya."</p>
+    <p class="text-xs mt-3 tracking-widest text-neutral-500">QS. AR-RUM : 21</p>
+    <i class="fa-solid fa-chevron-down mt-12 text-neutral-500 animate-bounce"></i>
+  </div>
+</header>
+
+<!-- COUPLE -->
+<section class="py-24 px-6 max-w-4xl mx-auto text-center">
+  <div class="rv">
+    <h3 class="serif text-4xl mb-3">Mempelai</h3><div class="line mb-12"></div>
+  </div>
+  <div class="grid md:grid-cols-2 gap-12">
+    <div class="rv">
+      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80" class="w-48 h-64 object-cover mx-auto grayscale border border-neutral-700 p-2" alt="Frisky">
+      <h4 class="serif text-3xl mt-6">Frisky</h4>
+      <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Putra pertama dari<br>Bapak Pria &amp; Ibu Pria</p>
+      <a href="https://instagram.com/" target="_blank" class="inline-block mt-4 text-sm hover:text-white text-neutral-400"><i class="fa-brands fa-instagram mr-1"></i>@frisky</a>
+    </div>
+    <div class="rv">
+      <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&q=80" class="w-48 h-64 object-cover mx-auto grayscale border border-neutral-700 p-2" alt="Amiya">
+      <h4 class="serif text-3xl mt-6">Amiya</h4>
+      <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Putri kedua dari<br>Bapak Wanita &amp; Ibu Wanita</p>
+      <a href="https://instagram.com/" target="_blank" class="inline-block mt-4 text-sm hover:text-white text-neutral-400"><i class="fa-brands fa-instagram mr-1"></i>@amiya</a>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="py-24 px-6 text-center bg-neutral-950">
+  <div class="rv">
+    <h3 class="serif text-4xl mb-3">Menuju Hari Bahagia</h3><div class="line mb-10"></div>
+    <div class="flex justify-center gap-3 md:gap-6" id="cd">
+      <div class="card w-20 md:w-28 py-5"><div class="serif text-4xl md:text-5xl" id="d">00</div><div class="text-[10px] tracking-widest uppercase text-neutral-500 mt-1">Hari</div></div>
+      <div class="card w-20 md:w-28 py-5"><div class="serif text-4xl md:text-5xl" id="h">00</div><div class="text-[10px] tracking-widest uppercase text-neutral-500 mt-1">Jam</div></div>
+      <div class="card w-20 md:w-28 py-5"><div class="serif text-4xl md:text-5xl" id="m">00</div><div class="text-[10px] tracking-widest uppercase text-neutral-500 mt-1">Menit</div></div>
+      <div class="card w-20 md:w-28 py-5"><div class="serif text-4xl md:text-5xl" id="s">00</div><div class="text-[10px] tracking-widest uppercase text-neutral-500 mt-1">Detik</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="py-24 px-6 max-w-4xl mx-auto text-center">
+  <div class="rv"><h3 class="serif text-4xl mb-3">Detail Acara</h3><div class="line mb-12"></div></div>
+  <div class="grid md:grid-cols-2 gap-6">
+    <div class="card p-8 rv">
+      <i class="fa-solid fa-ring text-2xl mb-4 text-neutral-400"></i>
+      <h4 class="serif text-3xl mb-4">Akad Nikah</h4>
+      <p class="text-sm">Minggu, 20 Desember 2026</p>
+      <p class="text-sm text-neutral-400 mb-4">08.00 – 10.00 WIB</p>
+      <p class="text-sm text-neutral-400 mb-6">Masjid Agung<br>Jl. Contoh No. 1, Jakarta</p>
+      <a class="btn inline-block" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Masjid+Agung+Jakarta"><i class="fa-solid fa-location-dot mr-2"></i>Petunjuk Peta</a>
+    </div>
+    <div class="card p-8 rv">
+      <i class="fa-solid fa-champagne-glasses text-2xl mb-4 text-neutral-400"></i>
+      <h4 class="serif text-3xl mb-4">Resepsi</h4>
+      <p class="text-sm">Minggu, 20 Desember 2026</p>
+      <p class="text-sm text-neutral-400 mb-4">11.00 – 14.00 WIB</p>
+      <p class="text-sm text-neutral-400 mb-6">Grand Ballroom Hotel<br>Jl. Contoh No. 2, Jakarta</p>
+      <a class="btn inline-block" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Grand+Ballroom+Hotel+Jakarta"><i class="fa-solid fa-location-dot mr-2"></i>Petunjuk Peta</a>
+    </div>
+  </div>
+  <a id="calBtn" class="btn inline-block mt-8 rv" target="_blank" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Frisky+%26+Amiya&dates=20261220T010000Z/20261220T070000Z"><i class="fa-regular fa-calendar-plus mr-2"></i>Simpan ke Kalender</a>
+</section>
+
+<!-- GALLERY -->
+<section class="py-24 px-4 bg-neutral-950">
+  <div class="rv text-center"><h3 class="serif text-4xl mb-3">Galeri</h3><div class="line mb-10"></div></div>
+  <div class="gal grid grid-cols-2 md:grid-cols-3 gap-2 max-w-5xl mx-auto rv">
+    <div class="overflow-hidden"><img class="w-full h-56 md:h-72 object-cover" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80" alt=""></div>
+    <div class="overflow-hidden"><img class="w-full h-56 md:h-72 object-cover" src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600&q=80" alt=""></div>
+    <div class="overflow-hidden"><img class="w-full h-56 md:h-72 object-cover" src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600&q=80" alt=""></div>
+    <div class="overflow-hidden"><img class="w-full h-56 md:h-72 object-cover" src="https://images.unsplash.com/photo-1460978812857-470ed1c77af0?w=600&q=80" alt=""></div>
+    <div class="overflow-hidden"><img class="w-full h-56 md:h-72 object-cover" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80" alt=""></div>
+    <div class="overflow-hidden"><img class="w-full h-56 md:h-72 object-cover" src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=600&q=80" alt=""></div>
+  </div>
+</section>
+
+<!-- GIFT -->
+<section class="py-24 px-6 max-w-3xl mx-auto text-center">
+  <div class="rv">
+    <h3 class="serif text-4xl mb-3">Amplop Digital</h3><div class="line mb-6"></div>
+    <p class="text-sm text-neutral-400 mb-10">Doa restu Anda sudah menjadi hadiah terindah. Namun bila ingin berbagi tanda kasih, dapat melalui:</p>
+  </div>
+  <div class="grid md:grid-cols-2 gap-6">
+    <div class="card p-6 rv"><i class="fa-solid fa-building-columns text-neutral-400 mb-3"></i>
+      <p class="tracking-widest text-xs uppercase">BCA</p>
+      <p class="serif text-2xl my-2" id="r1">1234567890</p>
+      <p class="text-xs text-neutral-400 mb-4">a.n. Frisky</p>
+      <button class="btn copy" data-t="r1">Salin No. Rekening</button></div>
+    <div class="card p-6 rv"><i class="fa-solid fa-building-columns text-neutral-400 mb-3"></i>
+      <p class="tracking-widest text-xs uppercase">Mandiri</p>
+      <p class="serif text-2xl my-2" id="r2">1234567890123</p>
+      <p class="text-xs text-neutral-400 mb-4">a.n. Amiya</p>
+      <button class="btn copy" data-t="r2">Salin No. Rekening</button></div>
+  </div>
+  <div class="card p-6 mt-6 rv inline-block">
+    <p class="tracking-widest text-xs uppercase mb-3"><i class="fa-solid fa-qrcode mr-2"></i>QRIS</p>
+    <img class="w-44 h-44 mx-auto bg-white p-2" alt="QRIS" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=QRIS-Frisky-Amiya-Contoh">
+    <p class="text-[11px] text-neutral-500 mt-3">Ganti dengan QRIS asli</p>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section class="py-24 px-6 bg-neutral-950">
+  <div class="max-w-xl mx-auto">
+    <div class="rv text-center"><h3 class="serif text-4xl mb-3">Ucapan &amp; RSVP</h3><div class="line mb-10"></div></div>
+    <div class="space-y-4 rv">
+      <input id="nm" placeholder="Nama">
+      <select id="at"><option>Hadir</option><option>Tidak Hadir</option><option>Masih Ragu</option></select>
+      <textarea id="ms" rows="4" placeholder="Ucapan &amp; doa"></textarea>
+      <button id="send" class="btn w-full">Kirim Ucapan</button>
+    </div>
+    <div id="wishes" class="mt-10 space-y-3 max-h-80 overflow-y-auto"></div>
+  </div>
+</section>
+
+<footer class="py-16 text-center px-6">
+  <p class="serif italic text-xl text-neutral-300 mb-3">Terima kasih atas doa dan restu Anda</p>
+  <h4 class="serif text-4xl">Frisky &amp; Amiya</h4>
+  <p class="text-[11px] text-neutral-600 mt-8 tracking-widest">#FRISKYAMIYA2026</p>
+</footer>
+
+<script>
+const $=s=>document.querySelector(s), bgm=$('#bgm');
+// Open invitation
+$('#openBtn').onclick=()=>{
+  $('#cover').classList.add('out');
+  document.body.classList.remove('overflow-hidden');
+  $('#musicBtn').classList.remove('hidden');$('#musicBtn').classList.add('flex');
+  bgm.play().catch(()=>{});
+  setTimeout(()=>{$('#cover').style.display='none';scrollTo(0,0);observe()},1200);
+};
+// Music toggle
+$('#musicBtn').onclick=()=>{
+  if(bgm.paused){bgm.play();$('#musicIcon').className='fa-solid fa-music'}
+  else{bgm.pause();$('#musicIcon').className='fa-solid fa-volume-xmark'}
+};
+// Scroll reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show')}}),{threshold:.15});
+function observe(){document.querySelectorAll('.rv').forEach(el=>io.observe(el))}
+observe();
+// Countdown (20 Des 2026, 08.00 WIB)
+const target=new Date('2026-12-20T08:00:00+07:00').getTime();
+function tick(){
+  let t=Math.max(0,target-Date.now());
+  const p=n=>String(n).padStart(2,'0');
+  $('#d').textContent=p(Math.floor(t/864e5));
+  $('#h').textContent=p(Math.floor(t%864e5/36e5));
+  $('#m').textContent=p(Math.floor(t%36e5/6e4));
+  $('#s').textContent=p(Math.floor(t%6e4/1e3));
+}
+tick();setInterval(tick,1000);
+// Copy
+document.querySelectorAll('.copy').forEach(b=>b.onclick=async()=>{
+  const txt=$('#'+b.dataset.t).textContent;
+  try{await navigator.clipboard.writeText(txt)}catch(e){const i=document.createElement('input');i.value=txt;document.body.appendChild(i);i.select();document.execCommand('copy');i.remove()}
+  const o=b.textContent;b.textContent='Tersalin ✓';setTimeout(()=>b.textContent=o,1800);
+});
+// RSVP
+const wishes=[{n:'Keluarga Besar',a:'Hadir',m:'Selamat menempuh hidup baru, semoga sakinah mawaddah warahmah.'}];
+function render(){
+  $('#wishes').innerHTML=wishes.map(w=>`<div class="card p-4"><div class="flex justify-between text-sm"><b class="font-normal">${esc(w.n)}</b><span class="text-[10px] tracking-widest uppercase text-neutral-500">${esc(w.a)}</span></div><p class="text-sm text-neutral-400 mt-2">${esc(w.m)}</p></div>`).join('');
+}
+function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML}
+$('#send').onclick=()=>{
+  const n=$('#nm').value.trim(),m=$('#ms').value.trim();
+  if(!n||!m){alert('Mohon isi nama dan ucapan.');return}
+  wishes.unshift({n,a:$('#at').value,m});render();
+  $('#nm').value='';$('#ms').value='';
+};
+render();
+</script>
+</body>
+</html>
